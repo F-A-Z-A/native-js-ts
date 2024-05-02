@@ -18,35 +18,35 @@
 
 //------------------------------------------------------------------------
 
-// const repo = {
-//   save(data) {
-//     try {
-//       localStorage.setItem('some-key', JSON.stringify(data));
-//     } catch (error) {
-//       return false;
-//     }
-//     return true;
-//   },
-//   saveAsync(data) {
-//     const promise = new Promise((resolve, rejected) => {
-//       try {
-//         localStorage.setItem('some-key', JSON.stringify(data));
-//         resolve();
-//       } catch (error) {
-//         rejected(error);
-//       }
-//     })
-//     return promise;
-//   }
-// };
-//
-// const result = repo.save({name: 'IT-KAMASUTRA'});
-// console.log('SAVED');
-//
-// const run = async () => {
-//   await repo.saveAsync({name: 'IT-KAMASUTRA'});
-//   console.log('SAVED');
-// };
+const repo = {
+  save(data) {
+    try {
+      localStorage.setItem('some-key', JSON.stringify(data));
+    } catch (error) {
+      return false;
+    }
+    return true;
+  },
+  saveAsync(data) {
+    const promise = new Promise((resolve, rejected) => {
+      try {
+        localStorage.setItem('some-key', JSON.stringify(data));
+        resolve();
+      } catch (error) {
+        rejected(error);
+      }
+    })
+    return promise;
+  }
+};
+
+const result = repo.save({name: 'IT-KAMASUTRA'});
+console.log('SAVED');
+
+const run = async () => {
+  await repo.saveAsync({name: 'IT-KAMASUTRA'});
+  console.log('SAVED');
+};
 
 //------------------------------------------------------------------------
 
