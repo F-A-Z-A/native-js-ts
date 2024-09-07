@@ -83,7 +83,7 @@ test('House should be repaired', () => {
 	expect(city.houses[1].repaired).toBeTruthy();
 });
 
-// 04. Создайте в том же файле еще одну функцию, чтобы тесты прошли
+// 04-filter. Создайте в том же файле еще одну функцию, чтобы тесты прошли
 test('Staff should be reduced', () => {
 	toFireStaff(city.governmentBuildings[0], 20);
 	expect(city.governmentBuildings[0].staffCount).toBe(180);
